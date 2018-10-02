@@ -38,6 +38,15 @@ export class SerialHelper {
 
         this.bindToSerialPort();
     }
+    
+    /**
+     *
+     * @param {baud} number
+     * @returns ?
+     */
+    updateBaudrate(baud) {
+        this.serialPort.update({ baudrate: baud });
+    }
 
     /**
      *
