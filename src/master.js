@@ -27,6 +27,10 @@ export class ModbusMaster {
         this.logger = new Logger(this._options);
         this.serial = SerialHelperFactory.create(serialPort, this._options);
     }
+    
+    changeSpeed(speed) {
+        this.serial.updateBaudrate(speed);
+    }
 
     /**
      * Modbus function read holding registers
